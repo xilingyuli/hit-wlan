@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.xilingyuli.hitwlan.MainActivity">
+
+    <TextView
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:text="HIT-WLAN"
+        android:textSize="30sp"
+        android:textColor="#90ffffff"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textIsSelectable="false"
+        android:maxLines="1"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="用户名"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="密码"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1" />
+
+        <Spinner
+            android:visibility="gone"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:entries="@array/account"
+            android:layout_below="@+id/editText2"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner"
+            android:layout_centerHorizontal="true">
+
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="显示密码"
+                android:id="@+id/checkBox"
+                android:layout_gravity="center_vertical" />
+
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="保存密码"
+                android:id="@+id/checkBox2" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:id="@+id/button"
+            android:layout_below="@+id/layout"
+            android:layout_alignRight="@+id/editText"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="更多"
+            android:id="@+id/button2"
+            android:layout_below="@+id/layout"
+            android:layout_alignLeft="@+id/editText" />
+
+
+    </RelativeLayout>
+</LinearLayout>

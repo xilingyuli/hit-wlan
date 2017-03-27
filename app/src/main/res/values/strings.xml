@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">hitwlan</string>
+    <string name="appwidget_text">连接</string>
+    <string-array name="account">
+        <item>锐捷用户</item>
+        <item>教职工用户 </item>
+        <item>其他用户</item>
+    </string-array>
+</resources>

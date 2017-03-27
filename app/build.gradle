@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key'
+            keyPassword 'xilingyuli'
+            storeFile file('../Key.jks')
+            storePassword 'xilingyuli'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.xilingyuli.hitwlan"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 2
+        versionName "2.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+}
